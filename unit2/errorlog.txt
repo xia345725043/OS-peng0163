@@ -1,0 +1,32 @@
+/home/student/OS2019StudentMaterial/kickc/bin/kickc.sh -a checkpoint2.2.kc
+java -jar /home/student/OS2019StudentMaterial/kickc/bin/../lib/kickc-0.7.7.jar -F /home/student/OS2019StudentMaterial/kickc/bin/../fragment -a checkpoint2.2.kc -I /home/student/OS2019StudentMaterial/kickc/bin/../stdlib
+//--------------------------------------------------
+//   KickC 0.7.x BETA (master) by Jesper Gravgaard   
+//--------------------------------------------------
+Compiling checkpoint2.2.kc
+Exception in thread "main" picocli.CommandLine$ExecutionException: Error while calling command (dk.camelot64.kickc.KickC@d7f8b4): java.lang.NullPointerException
+	at picocli.CommandLine.execute(CommandLine.java:1016)
+	at picocli.CommandLine.access$900(CommandLine.java:142)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:1199)
+	at picocli.CommandLine$RunLast.handle(CommandLine.java:1167)
+	at picocli.CommandLine$AbstractParseResultHandler.handleParseResult(CommandLine.java:1075)
+	at picocli.CommandLine.parseWithHandlers(CommandLine.java:1358)
+	at picocli.CommandLine.call(CommandLine.java:1629)
+	at picocli.CommandLine.call(CommandLine.java:1553)
+	at dk.camelot64.kickc.KickC.main(KickC.java:133)
+Caused by: java.lang.NullPointerException
+	at dk.camelot64.kickc.model.types.SymbolTypeInference.inferType(SymbolTypeInference.java:82)
+	at dk.camelot64.kickc.passes.PassNAddInitializerValueListTypeCasts.addValueCasts(PassNAddInitializerValueListTypeCasts.java:98)
+	at dk.camelot64.kickc.passes.PassNAddInitializerValueListTypeCasts.addValueCasts(PassNAddInitializerValueListTypeCasts.java:89)
+	at dk.camelot64.kickc.passes.PassNAddInitializerValueListTypeCasts.addValueCasts(PassNAddInitializerValueListTypeCasts.java:69)
+	at dk.camelot64.kickc.passes.PassNAddInitializerValueListTypeCasts.lambda$step$0(PassNAddInitializerValueListTypeCasts.java:38)
+	at dk.camelot64.kickc.model.iterator.ProgramExpressionIterator.execute(ProgramExpressionIterator.java:55)
+	at dk.camelot64.kickc.passes.PassNAddInitializerValueListTypeCasts.step(PassNAddInitializerValueListTypeCasts.java:32)
+	at dk.camelot64.kickc.Compiler.pass2Execute(Compiler.java:442)
+	at dk.camelot64.kickc.Compiler.pass2Optimize(Compiler.java:366)
+	at dk.camelot64.kickc.Compiler.compile(Compiler.java:178)
+	at dk.camelot64.kickc.KickC.call(KickC.java:232)
+	at dk.camelot64.kickc.KickC.call(KickC.java:24)
+	at picocli.CommandLine.execute(CommandLine.java:1009)
+	... 8 more
+make: *** [Makefile:10: checkpoint2.2.bin] Error 1
