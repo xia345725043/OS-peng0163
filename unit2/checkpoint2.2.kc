@@ -46,27 +46,7 @@ void RESET(){
 
 }
 
-void PAGFAULT(){
-}
- 
 
-void RESTORKEY(){
-}
-
-void ALTTABKEY(){
-}
-
-void VF011RD(){
-}
-
-void VF011WR(){
-}
-
-void RESERVED(){
-}
-
-void CPUKIL(){
-}
 
 // Here are a couple sample SYSCALL handlers that just display a character on the 
 void syscall00(){
