@@ -1,0 +1,468 @@
+// XMega65 Kernal Development Template
+// Each function of the kernal is a no-args function
+// The functions are placed in the SYSCALLS table surrounded by JMP and NOP
+
+import "string"
+
+// Use a linker definition file (put the previous listing into that file)
+#pragma link("mega65hyper.ld")
+
+// Some definitions of addresses and special values that this program uses 
+const char* RASTER = 0xd012;
+const char* VIC_MEMORY = 0xD018;
+const char* SCREEN = 0x0400;
+const char* BGCOL = 0xd021;
+const char* COLS = 0xd800;
+const char BLACK = 0;
+const char WHITE = 1;
+
+// Some text to display
+char[] MESSAGE = "peng0163";
+
+void main() {
+     
+
+}
+
+void RESET(){
+     *VIC_MEMORY = 0x14;
+      memset(SCREEN, ' ',40*25);
+      char* sc = SCREEN+40;
+      char* msg = MESSAGE;
+       while(*msg){
+         *sc++ = *msg++;
+        }
+       while(true) {
+        if(*RASTER==54 || *RASTER==66){
+            *BGCOL = WHITE;
+        }else {
+            *BGCOL = BLACK;
+        }
+
+     }   
+
+}
+
+void PAGFAULT(){
+}
+ 
+
+void RESTORKEY(){
+}
+
+void ALTTABKEY(){
+}
+
+void VF011RD(){
+}
+
+void VF011WR(){
+}
+
+void RESERVED(){
+}
+
+// Here are a couple sample SYSCALL handlers that just display a character on the 
+void syscall00(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall01(){
+     *(SCREEN+78) = '<';
+}
+
+void syscall02(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall03(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall04(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall05(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall06(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall07(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall08(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall09(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall0A(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall0B(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall0C(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall0D(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall0E(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall0F(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall10(){
+     *(SCREEN+79) = '>';
+}
+
+void SECURENTR(){
+     *(SCREEN+79) = '>';
+}
+
+void SECUREXIT(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall13(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall14(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall15(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall16(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall17(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall18(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall19(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall1A(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall1B(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall1C(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall1D(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall1E(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall1F(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall20(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall21(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall22(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall23(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall24(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall25(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall26(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall27(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall28(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall29(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall2A(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall2B(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall2C(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall2D(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall2E(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall2F(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall30(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall31(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall32(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall33(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall34(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall35(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall36(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall37(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall38(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall39(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall3A(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall3B(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall3C(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall3D(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall3E(){
+     *(SCREEN+79) = '>';
+}
+
+void syscall3F(){
+     *(SCREEN+79) = '>';
+}
+
+
+
+
+
+// Now we select the SYSCALL segment to hold the SYSCALL/trap entry point table.
+#pragma data_seg(Syscall)
+
+//The structure of each entry point is JMP <handler address> + NOP.
+// We have a char (xjmp) to hold the opcode for the JMP instruction,
+//and then put the address of SYSCALL/trap handler in the next 
+//two points as a pointer, and end with the NOP instruction opcode.
+struct SysCall {
+    char xjmp;       //Holds $4C, the JMP $nnnn opcode
+    void()* syscall; //Holds handler address, will be the target of the JMP
+    char xnop;       //HOlds $EA, the NOP opcode
+};
+
+// To save writing 0x4C and 0xEA all the time, we define them as constants
+const char JMP = 0x4c;
+const char NOP = 0xea;
+
+//Now we can have a nice table of up to 64 SYSCALL handlers expressed
+//in a fairly readable and easy format.
+//Each line is an instance of the struct Syscall from above, with the JMP
+//opcode value, the address of the handler routine and the NOP opcode value.
+export struct SysCall[] SYSCALLS = {
+    { JMP, &syscall00, NOP },
+    { JMP, &syscall01, NOP },
+    { JMP, &syscall02, NOP },
+    { JMP, &syscall03, NOP },
+    { JMP, &syscall04, NOP },
+    { JMP, &syscall05, NOP },
+    { JMP, &syscall06, NOP },
+    { JMP, &syscall07, NOP },
+    { JMP, &syscall08, NOP },
+    { JMP, &syscall09, NOP },
+    { JMP, &syscall0A, NOP },
+    { JMP, &syscall0B, NOP },
+    { JMP, &syscall0C, NOP },
+    { JMP, &syscall0D, NOP },
+    { JMP, &syscall0E, NOP },
+    { JMP, &syscall0F, NOP },
+    { JMP, &syscall10, NOP },
+    { JMP, SECURENTR, NOP },
+    { JMP, SECUREXIT, NOP },
+    { JMP, &syscall13, NOP },
+    { JMP, &syscall14, NOP },
+    { JMP, &syscall15, NOP },
+    { JMP, &syscall16, NOP },
+    { JMP, &syscall17, NOP },
+    { JMP, &syscall18, NOP },
+    { JMP, &syscall19, NOP },
+    { JMP, &syscall1A, NOP },
+    { JMP, &syscall1B, NOP },
+    { JMP, &syscall1C, NOP },
+    { JMP, &syscall1D, NOP },
+    { JMP, &syscall1F, NOP },
+    { JMP, &syscall20, NOP },
+    { JMP, &syscall21, NOP },
+    { JMP, &syscall22, NOP },
+    { JMP, &syscall23, NOP },
+    { JMP, &syscall24, NOP },
+    { JMP, &syscall25, NOP },
+    { JMP, &syscall26, NOP },
+    { JMP, &syscall27, NOP },
+    { JMP, &syscall28, NOP },
+    { JMP, &syscall29, NOP },
+    { JMP, &syscall2A, NOP },
+    { JMP, &syscall2B, NOP },
+    { JMP, &syscall2C, NOP },
+    { JMP, &syscall2D, NOP },
+    { JMP, &syscall2E, NOP },
+    { JMP, &syscall2F, NOP },
+    { JMP, &syscall30, NOP },
+    { JMP, &syscall31, NOP },
+    { JMP, &syscall32, NOP },
+    { JMP, &syscall33, NOP },
+    { JMP, &syscall34, NOP },
+    { JMP, &syscall35, NOP },
+    { JMP, &syscall36, NOP },
+    { JMP, &syscall37, NOP },
+    { JMP, &syscall38, NOP },
+    { JMP, &syscall39, NOP },
+    { JMP, &syscall3A, NOP },
+    { JMP, &syscall3B, NOP },
+    { JMP, &syscall3C, NOP },
+    { JMP, &syscall3D, NOP },
+    { JMP, &syscall3E, NOP },
+    { JMP, &syscall3F, NOP }
+    };
+
+//In this example we had only two SYSCALLs defined, so rather than having
+//another 62 lines, we can just ask KickC to make the TRAP table begin
+//at the next multiple of $100, i.e., at $8100.
+export align(0x100) struct SysCall[] SYSCALL_RESET = {
+    { JMP, &RESET, NOP },
+    { JMP, &PAGFAULT, NOP },
+    { JMP, &RESTORKEY, NOP },
+    { JMP, &ALTTABKEY, NOP },
+    { JMP, &VF011RD, NOP },
+    { JMP, &VF011WR, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP },
+    { JMP, &RESERVED, NOP }
+};
+
+
+
