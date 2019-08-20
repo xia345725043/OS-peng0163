@@ -25,8 +25,26 @@ main: {
     rts
 }
 RESET: {
+    jsr print_to_screen
+  b1:
+    lda #$36
+    cmp RASTER
+    beq b2
+    lda #$42
+    cmp RASTER
+    beq b2
+    lda #BLACK
+    sta BGCOL
+    jmp b1
+  b2:
+    lda #WHITE
+    sta BGCOL
+    jmp b1
+}
+// print_to_screen(byte* zeropage(2) message)
+print_to_screen: {
     .label sc = 4
-    .label msg = 2
+    .label message = 2
     lda #$14
     sta VIC_MEMORY
     ldx #' '
@@ -54,39 +72,26 @@ RESET: {
     lda #>SCREEN+$28
     sta.z sc+1
     lda #<MESSAGE
-    sta.z msg
+    sta.z message
     lda #>MESSAGE
-    sta.z msg+1
+    sta.z message+1
   b1:
     ldy #0
-    lda (msg),y
+    lda (message),y
     cmp #0
     bne b2
-  b3:
-    lda #$36
-    cmp RASTER
-    beq b4
-    lda #$42
-    cmp RASTER
-    beq b4
-    lda #BLACK
-    sta BGCOL
-    jmp b3
-  b4:
-    lda #WHITE
-    sta BGCOL
-    jmp b3
+    rts
   b2:
     ldy #0
-    lda (msg),y
+    lda (message),y
     sta (sc),y
     inc.z sc
     bne !+
     inc.z sc+1
   !:
-    inc.z msg
+    inc.z message
     bne !+
-    inc.z msg+1
+    inc.z message+1
   !:
     jmp b1
 }
