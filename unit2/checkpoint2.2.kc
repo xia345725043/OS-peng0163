@@ -46,266 +46,294 @@ void RESET(){
 
 }
 
+void PAGFAULT(){
+}
+ 
 
+void RESTORKEY(){
+}
 
+void ALTTABKEY(){
+}
+
+void VF011RD(){
+}
+
+void VF011WR(){
+}
+
+void RESERVED(){
+}
+
+void CPUKIL(){
+}
+
+void undefined_trap(){
+}
+
+void exit_hypervisor(){
+
+  //Trigger exit from Hypervisor mode
+   *(unsigned char *)$D67F = $01;
+   
+}
 // Here are a couple sample SYSCALL handlers that just display a character on the 
-void syscall00(){
-     *(SCREEN+79) = '>';
+
+void syscall1(){
+   exit_hypervisor();
 }
 
-void syscall01(){
-     *(SCREEN+78) = '<';
+void syscall2(){
+     exit_hypervisor();
 }
 
-void syscall02(){
-     *(SCREEN+79) = '>';
+void syscall3(){
+     exit_hypervisor();
 }
 
-void syscall03(){
-     *(SCREEN+79) = '>';
+void syscall4(){
+     exit_hypervisor();
 }
 
-void syscall04(){
-     *(SCREEN+79) = '>';
+void syscall5(){
+     exit_hypervisor();
 }
 
-void syscall05(){
-     *(SCREEN+79) = '>';
+void syscall6(){
+     exit_hypervisor();
 }
 
-void syscall06(){
-     *(SCREEN+79) = '>';
+void syscall7(){
+     exit_hypervisor();
 }
 
-void syscall07(){
-     *(SCREEN+79) = '>';
+void syscall8(){
+     exit_hypervisor();
 }
 
-void syscall08(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall09(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall0A(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall0B(){
-     *(SCREEN+79) = '<';
-}
-
-void syscall0C(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall0D(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall0E(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall0F(){
-     *(SCREEN+79) = '>';
+void syscall9(){
+     exit_hypervisor();
 }
 
 void syscall10(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
-void SECURENTR(){
-     *(SCREEN+79) = '>';
+void syscall11(){
+     exit_hypervisor();
 }
 
-void SECUREXIT(){
-     *(SCREEN+79) = '>';
+void syscall12(){
+     exit_hypervisor();
 }
 
 void syscall13(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall14(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall15(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall16(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
-void syscall17(){
-     *(SCREEN+79) = '>';
+void SECURENTR(){
+     exit_hypervisor();
 }
 
-void syscall18(){
-     *(SCREEN+79) = '>';
+void SECUREXIT(){
+     exit_hypervisor();
 }
 
 void syscall19(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall1A(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall1B(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall1C(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall1D(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall1E(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall1F(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall20(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall21(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall22(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall23(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall24(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall25(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall26(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall27(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall28(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall29(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall2A(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall2B(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall2C(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall2D(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall2E(){
-     *(SCREEN+79) = '>';
-}
-
-void syscall2F(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall30(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall31(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall32(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall33(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall34(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall35(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall36(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall37(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall38(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
 void syscall39(){
-     *(SCREEN+79) = '>';
+     exit_hypervisor();
 }
 
-void syscall3A(){
-     *(SCREEN+79) = '>';
+void syscall40(){
+     exit_hypervisor();
 }
 
-void syscall3B(){
-     *(SCREEN+79) = '>';
+void syscall41(){
+     exit_hypervisor();
 }
 
-void syscall3C(){
-     *(SCREEN+79) = '>';
+void syscall42(){
+     exit_hypervisor();
 }
 
-void syscall3D(){
-     *(SCREEN+79) = '>';
+void syscall43(){
+     exit_hypervisor();
 }
 
-void syscall3E(){
-     *(SCREEN+79) = '>';
+void syscall44(){
+     exit_hypervisor();
 }
 
-void syscall3F(){
-     *(SCREEN+79) = '>';
+void syscall45(){
+     exit_hypervisor();
 }
 
+void syscall46(){
+     exit_hypervisor();
+}
 
+void syscall47(){
+     exit_hypervisor();
+}
+
+void syscall48(){
+     exit_hypervisor();
+}
+
+void syscall49(){
+     exit_hypervisor();
+}
+
+void syscall50(){
+     exit_hypervisor();
+}
+
+void syscall51(){
+     exit_hypervisor();
+}
+
+void syscall52(){
+     exit_hypervisor();
+}
+
+void syscall53(){
+     exit_hypervisor();
+}
+
+void syscall54(){
+     exit_hypervisor();
+}
+
+void syscall55(){
+     exit_hypervisor();
+}
+
+void syscall56(){
+     exit_hypervisor();
+}
+
+void syscall57(){
+     exit_hypervisor();
+}
+
+void syscall58(){
+     exit_hypervisor();
+}
+
+void syscall59(){
+     exit_hypervisor();
+}
+
+void syscall60(){
+     exit_hypervisor();
+}
+
+void syscall61(){
+     exit_hypervisor();
+}
+
+void syscall62(){
+     exit_hypervisor();
+}
+
+void syscall63(){
+     exit_hypervisor();
+}
+
+void syscall64(){
+     exit_hypervisor();
+}
 
 
 
@@ -331,37 +359,25 @@ const char NOP = 0xea;
 //Each line is an instance of the struct Syscall from above, with the JMP
 //opcode value, the address of the handler routine and the NOP opcode value.
 export struct SysCall[] SYSCALLS = {
-    { JMP, &syscall00, NOP },
-    { JMP, &syscall01, NOP },
-    { JMP, &syscall02, NOP },
-    { JMP, &syscall03, NOP },
-    { JMP, &syscall04, NOP },
-    { JMP, &syscall05, NOP },
-    { JMP, &syscall06, NOP },
-    { JMP, &syscall07, NOP },
-    { JMP, &syscall08, NOP },
-    { JMP, &syscall09, NOP },
-    { JMP, &syscall0A, NOP },
-    { JMP, &syscall0B, NOP },
-    { JMP, &syscall0C, NOP },
-    { JMP, &syscall0D, NOP },
-    { JMP, &syscall0E, NOP },
-    { JMP, &syscall0F, NOP },
+    { JMP, &syscall1, NOP },
+    { JMP, &syscall2, NOP },
+    { JMP, &syscall3, NOP },
+    { JMP, &syscall4, NOP },
+    { JMP, &syscall5, NOP },
+    { JMP, &syscall6, NOP },
+    { JMP, &syscall7, NOP },
+    { JMP, &syscall8, NOP },
+    { JMP, &syscall9, NOP },
     { JMP, &syscall10, NOP },
-    { JMP, &SECURENTR, NOP },
-    { JMP, &SECUREXIT, NOP },
+    { JMP, &syscall11, NOP },
+    { JMP, &syscall12, NOP },
     { JMP, &syscall13, NOP },
     { JMP, &syscall14, NOP },
     { JMP, &syscall15, NOP },
     { JMP, &syscall16, NOP },
-    { JMP, &syscall17, NOP },
-    { JMP, &syscall18, NOP },
+    { JMP, &SECURENTR, NOP },
+    { JMP, &SECUREXIT, NOP },
     { JMP, &syscall19, NOP },
-    { JMP, &syscall1A, NOP },
-    { JMP, &syscall1B, NOP },
-    { JMP, &syscall1C, NOP },
-    { JMP, &syscall1D, NOP },
-    { JMP, &syscall1F, NOP },
     { JMP, &syscall20, NOP },
     { JMP, &syscall21, NOP },
     { JMP, &syscall22, NOP },
@@ -372,12 +388,6 @@ export struct SysCall[] SYSCALLS = {
     { JMP, &syscall27, NOP },
     { JMP, &syscall28, NOP },
     { JMP, &syscall29, NOP },
-    { JMP, &syscall2A, NOP },
-    { JMP, &syscall2B, NOP },
-    { JMP, &syscall2C, NOP },
-    { JMP, &syscall2D, NOP },
-    { JMP, &syscall2E, NOP },
-    { JMP, &syscall2F, NOP },
     { JMP, &syscall30, NOP },
     { JMP, &syscall31, NOP },
     { JMP, &syscall32, NOP },
@@ -388,12 +398,31 @@ export struct SysCall[] SYSCALLS = {
     { JMP, &syscall37, NOP },
     { JMP, &syscall38, NOP },
     { JMP, &syscall39, NOP },
-    { JMP, &syscall3A, NOP },
-    { JMP, &syscall3B, NOP },
-    { JMP, &syscall3C, NOP },
-    { JMP, &syscall3D, NOP },
-    { JMP, &syscall3E, NOP },
-    { JMP, &syscall3F, NOP }
+    { JMP, &syscall40, NOP },
+    { JMP, &syscall41, NOP },
+    { JMP, &syscall42, NOP },
+    { JMP, &syscall43, NOP },
+    { JMP, &syscall44, NOP },
+    { JMP, &syscall45, NOP },
+    { JMP, &syscall46, NOP },
+    { JMP, &syscall47, NOP },
+    { JMP, &syscall48, NOP },
+    { JMP, &syscall49, NOP },
+    { JMP, &syscall50, NOP },
+    { JMP, &syscall51, NOP },
+    { JMP, &syscall52, NOP },
+    { JMP, &syscall53, NOP },
+    { JMP, &syscall54, NOP },
+    { JMP, &syscall55, NOP },
+    { JMP, &syscall56, NOP },
+    { JMP, &syscall57, NOP },
+    { JMP, &syscall58, NOP },
+    { JMP, &syscall59, NOP },
+    { JMP, &syscall60, NOP },
+    { JMP, &syscall61, NOP },
+    { JMP, &syscall62, NOP },
+    { JMP, &syscall63, NOP },
+    { JMP, &syscall64, NOP }
     };
 
 //In this example we had only two SYSCALLs defined, so rather than having
@@ -406,48 +435,48 @@ export align(0x100) struct SysCall[] SYSCALL_RESET = {
     { JMP, &ALTTABKEY, NOP },
     { JMP, &VF011RD, NOP },
     { JMP, &VF011WR, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
-    { JMP, &RESERVED, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
+    { JMP, &undefined_trap, NOP },
     { JMP, &CPUKIL, NOP }
 };
 
